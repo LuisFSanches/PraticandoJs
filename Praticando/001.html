@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Praticando 001</title>
+</head>
+
+<style>
+  h1 {
+    text-align: center;
+    background-color: chartreuse;
+  }
+
+  p {
+    text-align: center;
+  }
+</style>
+
+<body>
+
+  <h1>Média do Aluno</h1>
+
+  <script>
+
+    var nome = window.prompt('Qual seu nome? ')
+    var n1 = Number.parseFloat(window.prompt('Qual sua Primeira nota? '))
+    var n2 = Number.parseFloat(window.prompt('Qual sua Segunda Nota?  '))
+    var media = (n1 + n2) / 2
+    document.write
+      (`<p>Nome: ${nome}<br> N1: ${n1}<br> N2: ${n1}<br> Média: ${media}<br></p>`)
+    document.write
+      (`<p>${media >= 7 ? '<styleVocê foi aprovado' : 'Você foi reprovado'}<p>`)
+
+
+
+  </script>
+
+</body>
+
+</html>
