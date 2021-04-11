@@ -21,9 +21,9 @@
 
   <div>
     <br>
-    <div classe='d1'>Esse texto mudou de cor atráves de QuerySelect | Classe</div>
+    <div id="d1">Esse texto mudou de cor atráves de QuerySelect | ID</div>
     <br>
-    <h3 id='d2'>Esse texto mudou o background atráves de QuerySelect | ID </h3>
+    <h3 class="d2">Esse texto mudou o background atráves de QuerySelect | Classe </h3>
   </div>
 
   <script>
@@ -44,11 +44,11 @@
 
     //Usando Query select
 
-    var q = window.document.querySelector('div.d1')
-    q.style.background = 'grenn'
+    var q = window.document.querySelector('div#d1')
+    q.style.color = 'green'
 
-    var q2 = window.document.querySelector('h3#d2')
-    q2.style.color = 'red'
+    var q2 = window.document.querySelector('h3.d2')
+    q2.style.background = 'red'
 
 
   </script>
