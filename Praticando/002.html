@@ -13,19 +13,51 @@
 
 <body>
 
-  <h1>Iniciando os estudos sobre DOM</h1>
+  <h1 id="inicio">Iniciando os estudos sobre DOM</h1>
+
+  <p> Essa é a TAG 0</p>
+
+  <p name="tagnova"> Chamando por nome</p>
+
+  <div>
+    <br>
+    <div classe='d1'>Esse texto mudou de cor atráves de QuerySelect | Classe</div>
+    <br>
+    <h3 id='d2'>Esse texto mudou o background atráves de QuerySelect | ID </h3>
+  </div>
+
+  <script>
+
+    document.write(document.title + '<br>')
+    document.write(document.URL + '<br>')
+
+    var p1 = window.document.getElementsByTagName('p')[0]
+    window.document.write(p1.innerText + '<br>')
+
+
+    var p4 = window.document.getElementById('inicio')
+    p4.style.background = 'green'
+
+    var p5 = window.document.getElementsByName('tagnova')[0]
+    window.document.write(p5.innerText)
+
+
+    //Usando Query select
+
+    var q = window.document.querySelector('div.d1')
+    q.background = 'grenn'
+
+    var q2 = window.document.querySelector('h3#d2')
+    q2.color = 'red'
+    
+
+  </script>
+
 
   <footer id="rodape">
 
     <p>Aluno: Pedro Henrique &copy;</p>
 
-    <script>
-
-      document.write(document.title + '<br>')
-      document.write(document.URL)
-
-
-    </script>
   </footer>
 
 </body>
