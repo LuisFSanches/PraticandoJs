@@ -9,22 +9,37 @@
   <title>Somando Numeros</title>
 </head>
 
+<style>
+  div#res {
+
+    margin-top: 20px;
+    font: normal 21px Arial;
+    line-height: 180px;
+    background-color: darkgreen;
+    width: 200px;
+    color: white;
+    height: 200px;
+    text-align: center;
+
+
+  }
+</style>
+
 
 
 <body>
 
-
   <h1> Somando Valores</h1>
-
-  <input type="number" name="txt1" id="txt1"> +
-  <input type="number" name="txt2" id="txt2">
-  <input type="submit" value="Somar" onclick="somar()">
-  <div id="res"> Resultado</div>
+  <div>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <input type="submit" value="Somar" onclick="somar()">
+    <div id="res"> Resultado</div>
+  </div>
 
 </body>
 
 <script>
-
 
   function somar() {
 
@@ -35,10 +50,7 @@
     var n2 = Number(tn2.value)
     var s = n1 + n2
 
-    res.innerHTML = `Vai deitar e a soma é ${s}`
-
-
-
+    res.innerHTML = `A Soma é ${s}`
 
   }
 
