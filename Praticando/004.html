@@ -11,7 +11,30 @@
 <body>
   <h1> Realizando uma subtração</h1>
 
-  <input type="number">
+  <input type="number" id="camp1"> -
+  <input type="number" id="camp2">
+  <input type="submit" value="Subtrair" onclick="subtrair()"> <br>
+
+  <p id="txt_result">Resultado</p>
+
+  <script>
+
+    function subtrair() {
+
+      var camp1 = window.document.getElementById("camp1")
+      var camp2 = window.document.getElementById("camp2")
+      var rest = window.document.getElementById('txt_result')
+      var n1 = Number(camp1.value)
+      var n2 = Number(camp2.value)
+      var result = n1 - n2
+
+      txt_result.innerHTML = `A subtração é ${result}`
+
+    }
+
+
+  </script>
+
 </body>
 
 
