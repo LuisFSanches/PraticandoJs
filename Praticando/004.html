@@ -9,29 +9,73 @@
 </head>
 
 <body>
-  <h1> Realizando uma subtração</h1>
+
+  <h1> Realizando Contas </h1>
 
   <input type="number" id="camp1"> -
   <input type="number" id="camp2">
-  <input type="submit" value="Subtrair" onclick="subtrair()"> <br>
+
+  <select id="select_01">
+    <option value="Selecionar">Selecionar</option>
+    <option value="subtracao">Subtração</option>
+    <option value="multiplicar">Multiplicar</option>
+
+    </option>
+
+  </select>
+
+  <input type="submit" value="Realizar Conta" onclick="operacao()"> <br>
 
   <p id="txt_result">Resultado</p>
 
+  <h1></h1>
+
   <script>
 
-    function subtrair() {
+    var teste
+    function escolha() {
 
-      var camp1 = window.document.getElementById("camp1")
-      var camp2 = window.document.getElementById("camp2")
-      var rest = window.document.getElementById('txt_result')
-      var n1 = Number(camp1.value)
-      var n2 = Number(camp2.value)
-      var result = n1 - n2
 
-      txt_result.innerHTML = `A subtração é ${result}`
+      var o_picao = window.document.getElementById('select_01')
+      return o_picao.addEventListener('change', (event) => {
+
+        teste = event.target.value
+        console.log(teste)
+
+
+      })
 
     }
 
+    escolha()
+
+
+
+    function operacao() {
+
+      var frase
+      var camp1 = window.document.getElementById("camp1")
+      var camp2 = window.document.getElementById("camp2")
+      var n1 = Number(camp1.value)
+      var n2 = Number(camp2.value)
+      var rest = window.document.getElementById('txt_result')
+      console.log(teste)
+
+      if (teste === "subtracao") {
+
+        var result = n1 - n2
+        frase = result
+
+      } else if (teste === "multiplicar") {
+
+        var result = n1 * n2
+        frase = result
+
+      }
+
+      txt_result.innerHTML = `O resultado é ${frase}`
+
+    }
 
   </script>
 
