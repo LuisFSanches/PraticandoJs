@@ -16,9 +16,11 @@
   <input type="number" id="camp2">
 
   <select id="select_01">
-    <option value="Selecionar">Selecionar</option>
+    <option> Selecionar</option>
     <option value="subtracao">Subtração</option>
     <option value="multiplicar">Multiplicar</option>
+    <option value="dividir">Dividir</option>
+    <option value="Somar">Somar</option>
 
     </option>
 
@@ -28,28 +30,21 @@
 
   <p id="txt_result">Resultado</p>
 
-  <h1></h1>
-
   <script>
 
     var teste
     function escolha() {
 
-
       var o_picao = window.document.getElementById('select_01')
       return o_picao.addEventListener('change', (event) => {
 
         teste = event.target.value
-        console.log(teste)
-
 
       })
 
     }
 
     escolha()
-
-
 
     function operacao() {
 
@@ -59,7 +54,6 @@
       var n1 = Number(camp1.value)
       var n2 = Number(camp2.value)
       var rest = window.document.getElementById('txt_result')
-      console.log(teste)
 
       if (teste === "subtracao") {
 
@@ -70,6 +64,17 @@
 
         var result = n1 * n2
         frase = result
+
+      } else if (teste === "dividir") {
+
+        var result = n1 / n2
+        frase = result
+
+      } else if (teste === "Somar") {
+
+        var result = n1 + n2
+        frase = result
+
 
       }
 
