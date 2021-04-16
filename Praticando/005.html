@@ -12,6 +12,14 @@
 
   <h1>Gerando numeros da sorte</h1>
 
+  <select id='tipo_jogo'>
+
+    <option id='megasena'>Mega Sena</option>
+    <option id='lotofacil'>Loto Fácil</option>
+    <option id='lotomania'>Loto Mania</option>
+
+  </select>
+
   <button type="button" onclick="gerar()">Gerar</button>
 
   <h3 id="num_sorte">Aqui aparece o numero da sorte.</h3>
@@ -23,13 +31,13 @@
 
       var resul = []
       var i = 0
-      for (; i < 9; i++) {
+      for (; i < 6; i++) {
 
         num = Math.floor((Math.random() * 60) + 1);
 
         resul.push(num)
 
-        num_sorte.innerHTML = resul
+        num_sorte.innerHTML = `Seus numeros da sorte: ${resul}`
 
         console.log(num)
 
